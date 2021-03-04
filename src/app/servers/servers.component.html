@@ -1,9 +1,8 @@
 <h3>THIS is servers component</h3>
-<div style="color: blue">
-  <app-server></app-server>
-  <app-server></app-server>
-</div>
-<p>button will unlock in two seconds</p>
+<label>Server Name </label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<p>{{ serverName }}</p>
+<p>button will unlock in three seconds</p>
 <button
   class="btn btn-primary"
   (click)="onCreateServer()"
@@ -12,4 +11,8 @@
   Add server
 </button>
 <p>{{ serverCreationStatus }}</p>
-<p>The value of is {{ allowNewServer }}</p>
+<p>The value is {{ allowNewServer }}</p>
+<div style="color: blue">
+  <app-server></app-server>
+  <app-server></app-server>
+</div>
