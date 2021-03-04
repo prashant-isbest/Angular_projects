@@ -3,5 +3,13 @@
   <app-server></app-server>
   <app-server></app-server>
 </div>
-<button class="btn btn-primary" [disabled]="allowNewServer">Add server</button>
+<p>button will unlock in two seconds</p>
+<button
+  class="btn btn-primary"
+  (click)="onCreateServer()"
+  [disabled]="!allowNewServer"
+>
+  Add server
+</button>
+<p>{{ serverCreationStatus }}</p>
 <p>The value of is {{ allowNewServer }}</p>
