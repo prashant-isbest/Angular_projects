@@ -1,5 +1,9 @@
 <h3>THIS is servers component</h3>
 <label>Server Name </label>
+<p>2 way data binding</p>
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<br />
+<p>event binding</p>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
 <p>{{ serverName }}</p>
 <p>button will unlock in three seconds</p>
