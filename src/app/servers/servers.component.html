@@ -6,6 +6,7 @@
 <!-- <p>event binding</p>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
 <!-- <p>serverName is {{ serverName }}</p> -->
+<p>The value is {{ allowNewServer }}</p>
 <p>button will unlock in three seconds</p>
 <button
   class="btn btn-primary"
@@ -15,17 +16,7 @@
   Add server
 </button>
 <p>{{ serverCreationStatus }}</p>
-<p>The value is {{ allowNewServer }}</p>
-<label>User Name </label>
-<input type="text" class="form-control" [(ngModel)]="userName" />
-<button
-  class="btn btn-primary"
-  [disabled]="userName === ''"
-  (click)="userName = ''"
->
-  Reset userName
-</button>
-<p>{{ userName }}</p>
+<app-user></app-user>
 <div style="color: blue">
   <app-server></app-server>
   <app-server></app-server>
