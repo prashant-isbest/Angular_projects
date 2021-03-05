@@ -18,6 +18,7 @@
 <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
 <app-user></app-user>
 <div style="color: blue">
-  <app-server></app-server>
-  <app-server></app-server>
+  <!-- <app-server></app-server>
+  <app-server></app-server> -->
+  <app-server *ngFor="let s of servers"></app-server>
 </div>
